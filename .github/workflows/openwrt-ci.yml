@@ -104,6 +104,11 @@ jobs:
           CONFIG_TARGET_x86_64=y
           CONFIG_TARGET_x86_64_Generic=y
           EOF
+          
+          # 生成tar.gz-用于docker:
+          cat >> .config <<EOF
+          CONFIG_TARGET_ROOTFS_TARGZ=y
+          EOF
 
           # 固件压缩:
           # cat >> .config <<EOF
